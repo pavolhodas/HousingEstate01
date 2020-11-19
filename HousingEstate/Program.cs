@@ -6,7 +6,9 @@ namespace HousingEstate
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Flat flat = new Flat();
+            flat.All();
+            flat.WriteOnly();
         }
     }
 }
