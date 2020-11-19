@@ -14,6 +14,12 @@ namespace HousingEstate
             get { return numberOfFlat; }
             set { numberOfFlat = value; }
         }
+
+        public List<string> ListOfPerson
+        {
+            get { return listOfPerson; }
+            set { listOfPerson = value; }
+        }
         public void All()
         {
             for (int i = 0; i <= 3; i++)
