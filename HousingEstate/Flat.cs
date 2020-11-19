@@ -24,7 +24,7 @@ namespace HousingEstate
         {
             for (int i = 0; i <= 3; i++)
             {
-                Console.WriteLine(numberOfFlat[i] = i++);
+                Console.WriteLine(numberOfFlat[i]);
             }
             for (int i = 0; i <= 3; i++)
             {
