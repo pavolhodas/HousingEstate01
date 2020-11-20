@@ -4,38 +4,28 @@ using System.Text;
 
 namespace HousingEstate
 {
-    class Flat : Person
+    class Flat
     {
-        private List<int> numberOfFlat = new List<int> { 1, 2, 3, 4 };
-        private List<string> listOfPerson = new List<string> { "Palino", "Peto", "Katka", "Miloš" };
+        //private List<Person> persons { get; }
+        public int NumberOfFlat { get; }
+        public int Entrace { get; }
+        public List<Person> persons = new List<Person> { };
 
-        public List<int> NumberOfFlat
+
+        public Flat(int entrace, int numberOfFlat)
         {
-            get { return numberOfFlat; }
-            set { numberOfFlat = value; }
+            Entrace = entrace;
+            NumberOfFlat = numberOfFlat;
         }
-
-        public List<string> ListOfPerson
+        public override string ToString()
         {
-            get { return listOfPerson; }
-            set { listOfPerson = value; }
+            return $"{Entrace} enterace flats: 1-10." + $" Im going to flat number {NumberOfFlat}";
         }
-        public void All()
+        
+        public void Persons()
         {
-            for (int i = 0; i <= 3; i++)
-            {
-                Console.WriteLine(numberOfFlat[i]);
-            }
-            for (int i = 0; i <= 3; i++)
-            {
-                Console.WriteLine(listOfPerson[i]);
-            }
 
+            Console.WriteLine(persons);
         }
-        public void WriteOnly()
-        {
-        Console.WriteLine($"V panelaku č.{numberOfFlat[0]} býva {listOfPerson[0]}");
-
-       }
     }
 }
