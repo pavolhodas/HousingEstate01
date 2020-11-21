@@ -19,7 +19,7 @@ namespace HousingEstate
         }
         public void Update()
         {
-            Console.WriteLine(Name);
+            Console.WriteLine(Name, Surname, Age);
         }
     }
 }
