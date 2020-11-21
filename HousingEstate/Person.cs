@@ -8,18 +8,18 @@ namespace HousingEstate
     {
         public string Name { get; }
         public string Surname { get; }
-        public string Age { get; }
+        public int Age { get; }
+       
 
-        public Person(string name, string surname, string age)
+        public Person(string name, string surname, int age)
         {
             Name = name;
             Surname = surname;
             Age = age;
         }
-
-        public override string ToString()
+        public void Update()
         {
-            return $"Name: {Name}, Surname: {Surname}, Age: {Age}";
+            Console.WriteLine(Name);
         }
     }
 }

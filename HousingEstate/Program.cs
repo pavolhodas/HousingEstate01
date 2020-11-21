@@ -6,20 +6,31 @@ namespace HousingEstate
     {
         static void Main(string[] args)
         {
-            Person person1 = new Person("Palo", "Hodás", "16");
-            Person person2 = new Person("Jožo", "Hodás", "16");
+            //Person person1 = new Person("Palo", "Hodás", "16");
+            //Person person2 = new Person("Jožo", "Hodás", "18");
 
-            Console.WriteLine(person1.ToString());
-            Console.WriteLine(person2.ToString());
+            //Console.WriteLine(person1.ToString());
+            //Console.WriteLine(person2.ToString());
 
-            Flat flat1 = new Flat(1, 1);
-            Flat flat2 = new Flat(1, 2);
-            //flat1 = person1.Flat;
+            //Flat flat1 = new Flat(1);
+            //Flat flat2 = new Flat(2);
 
-            Console.WriteLine(flat1.ToString());
-            Console.WriteLine(flat2.ToString());
+            //Console.WriteLine(person1.ToString() + flat1.ToString());
+            //Console.WriteLine(person2.ToString() + flat2.ToString());
 
-            flat1.Persons();
+            //Entrance entrance = new Entrance();
+            //entrance.UnpairedEntrance();
+
+            Flat flat = new Flat();
+            while (true)
+            {
+                Console.WriteLine("Napíš meno");
+                string input = Console.ReadLine();
+                flat.FindPersonBy(input);
+            }
+            //Person person = new Person("", "", 15);
+            //person.GetInfo();
+            
         }
        
         

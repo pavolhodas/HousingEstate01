@@ -6,26 +6,38 @@ namespace HousingEstate
 {
     class Flat
     {
-        //private List<Person> persons { get; }
-        public int NumberOfFlat { get; }
-        public int Entrace { get; }
-        public List<Person> persons = new List<Person> { };
+        private List<int> NumberOfFlats = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
+        private readonly List<Person> peoples;
 
-
-        public Flat(int entrace, int numberOfFlat)
+        public Flat()
         {
-            Entrace = entrace;
-            NumberOfFlat = numberOfFlat;
+            peoples = new List<Person>
+            {
+                new Person("Pavol ", "Hodás ", 16),
+                new Person("Miloš ", "Hodás ", 46),
+                new Person("Katarína ", "Hodásová ", 40),
+                new Person("Peter ", "Hodás ", 18)
+            };
+            
         }
-        public override string ToString()
+        public void Update()
         {
-            return $"{Entrace} enterace flats: 1-10." + $" Im going to flat number {NumberOfFlat}";
+            foreach(var people in peoples)
+            {
+                people.Update();
+            }
         }
-        
-        public void Persons()
+        public Person FindPersonBy(string name)
         {
+            foreach (var people in peoples)
+            {
+                if (people.Name.ToLower() == name.ToLower())
+                {
+                    return people;
+                }
+            }
+            return null;
 
-            Console.WriteLine(persons);
         }
     }
 }
