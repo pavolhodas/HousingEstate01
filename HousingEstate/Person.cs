@@ -6,20 +6,20 @@ namespace HousingEstate
 {
     class Person
     {
-        private string Name { get; }
-        private string Surname { get; }
-        private int Age { get; }
+        public string name;
+        public string surname;
+        public int age;
        
 
-        public Person(string name, string surname, int age)
+        public Person(string Name, string Surname, int Age)
         {
-            Name = name;
-            Surname = surname;
-            Age = age;
+            this.name = Name;
+            this.surname = Surname;
+            this.age = Age;
         }
         public string ToString()
         {
-           return $"{Name}, {Surname}, {Age}";
+           return $"{name}, {surname}, {age}";
         }
     }
 }
