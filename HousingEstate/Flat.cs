@@ -6,10 +6,10 @@ namespace HousingEstate
 {
     class Flat : Person
     {
-        private int numberOfFlat;
-        private string area;
-        private int numberOfRooms;
-        private List<Person> peoples;
+        private int numberOfFlat { get; }
+        private string area { get; }
+        private int numberOfRooms { get; }
+        private List<Person> peoples { get; }
         public Flat(int NumberOfFlat, string Area, int NumberOfRooms, string Name, string Surname, int Age) : base(Name, Surname, Age)
         {
             numberOfFlat = NumberOfFlat;
