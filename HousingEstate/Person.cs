@@ -6,9 +6,9 @@ namespace HousingEstate
 {
     class Person
     {
-        public string Name { get; }
-        public string Surname { get; }
-        public int Age { get; }
+        private string Name { get; }
+        private string Surname { get; }
+        private int Age { get; }
        
 
         public Person(string name, string surname, int age)
@@ -17,9 +17,9 @@ namespace HousingEstate
             Surname = surname;
             Age = age;
         }
-        public void Update()
+        public string ToString()
         {
-            Console.WriteLine(Name, Surname, Age);
+           return $"{Name}, {Surname}, {Age}";
         }
     }
 }
