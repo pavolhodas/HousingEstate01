@@ -4,40 +4,51 @@ using System.Text;
 
 namespace HousingEstate
 {
-    class Flat : Person
+    class Flat
     {
         private int numberOfFlat { get; }
         private string area { get; }
         private int numberOfRooms { get; }
-        private List<Person> peoples { get; }
-        public Flat(int NumberOfFlat, string Area, int NumberOfRooms, string Name, string Surname, int Age) : base(Name, Surname, Age)
+        public List<Person> persons = new List<Person>() { };
+        public Flat(int NumberOfFlat, string Area, int NumberOfRooms) 
         {
             numberOfFlat = NumberOfFlat;
             area = Area;
             numberOfRooms = NumberOfRooms;
-        
 
 
-            peoples = new List<Person>
+
+            persons = new List<Person>
             {
-                new Person("Peter", "Hodás", 18),
-                new Person("Pavol", "Hodás", 16),
-                new Person("Miloš", "Hodás", 46),
-                new Person("katarína", "Hodásová", 41)
+                new Person("Peter ", "Hodás ", 18),
+                new Person("Pavol ", "Hodás ", 16),
+                new Person("Miloš ", "Hodás ", 46),
+                new Person("katarína ", "Hodásová ", 41)
             };
         }
-        public string Show()
+        private string Show()
         {
-            foreach (var people in peoples)
+            string buffer = "";
+            foreach (Person person in persons)
             {
-                return $"{people}";
+                buffer += person.Name + person.Surname + person.Age.ToString();
             }
-            return null;
+            return buffer;
         }
-        public string ToString()
+        public  string GetPersonInformation()
         {
-            return $"{numberOfFlat}, {area}, {numberOfRooms}, {name}, {surname}, {age}";
+            return $"{Show()}";
         }
-
+        public string ToString(int position)
+        {
+            return $"Flat number:{numberOfFlat}, {area}, {numberOfRooms}    persons who live here:{persons[position].ToString()}";
+        }
+        public void AddHabitant(Person habitant)
+        {
+            //foreach (var habitant in persons)
+            //{
+            //    Console.WriteLine(habitant);
+            //}
+        }
     }
 }
