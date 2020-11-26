@@ -17,7 +17,7 @@ namespace HousingEstate
             Surname = surname;
             Age = age;
         }
-        public string GetPersonInformation()
+        public override string ToString()
         {
            return $"{Name}, {Surname}, {Age}";
         }

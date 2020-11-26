@@ -20,10 +20,10 @@ namespace HousingEstate
 
             persons = new List<Person>
             {
-                new Person("Peter ", "Hodás ", 18),
-                new Person("Pavol ", "Hodás ", 16),
-                new Person("Miloš ", "Hodás ", 46),
-                new Person("katarína ", "Hodásová ", 41)
+                new Person("Peter", "Hodás", 18),
+                new Person("Pavol", "Hodás", 16),
+                new Person("Miloš", "Hodás", 46),
+                new Person("katarína", "Hodásová", 41)
             };
         }
         private string Show()
@@ -32,23 +32,17 @@ namespace HousingEstate
             foreach (Person person in persons)
             {
                 buffer += person.Name + person.Surname + person.Age.ToString();
+                buffer += " ";
             }
             return buffer;
         }
-        public  string GetPersonInformation()
+        public string AddHabitant()
         {
             return $"{Show()}";
         }
-        public string ToString(int position)
+        public string GetInfoAboutAllHabitants(int position)
         {
             return $"Flat number:{numberOfFlat}, {area}, {numberOfRooms}    persons who live here:{persons[position].ToString()}";
-        }
-        public void AddHabitant(Person habitant)
-        {
-            //foreach (var habitant in persons)
-            //{
-            //    Console.WriteLine(habitant);
-            //}
         }
     }
 }
