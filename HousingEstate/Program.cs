@@ -15,10 +15,6 @@ namespace HousingEstate
 
             Flat flat = new Flat(1, "100m²", 5);
 
-            //Console.WriteLine(flat.AddHabitant());
-
-            //Console.WriteLine(flat.habitantList[0].ToString());
-            //Console.WriteLine(flat.GetInfoAboutAllHabitants(0));
 
             Console.WriteLine(a.ToString());
             Console.WriteLine(flat.Tostring());

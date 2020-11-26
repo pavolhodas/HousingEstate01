@@ -24,18 +24,6 @@ namespace HousingEstate
         }
 
 
-        //public string Show()
-        //{
-        //    string buffer = "";
-        //    foreach (Person person in habitantList)
-        //    {
-        //        buffer += person.Name + person.Surname + person.Age.ToString();
-        //        buffer += " ";
-        //    }
-        //    return buffer;
-        //}
-
-
         public void AddHabitant(Person habitant)
         {
             Console.WriteLine(habitant);
