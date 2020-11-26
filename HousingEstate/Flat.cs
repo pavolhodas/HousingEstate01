@@ -9,40 +9,49 @@ namespace HousingEstate
         private int numberOfFlat { get; }
         private string area { get; }
         private int numberOfRooms { get; }
-        public List<Person> persons = new List<Person>() { };
+        public List<Person> habitantList = new List<Person>() { };
         public Flat(int NumberOfFlat, string Area, int NumberOfRooms) 
         {
             numberOfFlat = NumberOfFlat;
             area = Area;
             numberOfRooms = NumberOfRooms;
-
-
-
-            persons = new List<Person>
-            {
-                new Person("Peter", "Hodás", 18),
-                new Person("Pavol", "Hodás", 16),
-                new Person("Miloš", "Hodás", 46),
-                new Person("katarína", "Hodásová", 41)
-            };
         }
-        private string Show()
+
+
+        public string Tostring()
+        {
+            return $"{numberOfFlat}, {area}, {numberOfRooms}";
+        }
+
+
+        //public string Show()
+        //{
+        //    string buffer = "";
+        //    foreach (Person person in habitantList)
+        //    {
+        //        buffer += person.Name + person.Surname + person.Age.ToString();
+        //        buffer += " ";
+        //    }
+        //    return buffer;
+        //}
+
+
+        public void AddHabitant(Person habitant)
+        {
+            Console.WriteLine(habitant);
+        }
+
+
+
+        public string GetInfoAboutAllHabitants()
         {
             string buffer = "";
-            foreach (Person person in persons)
+            foreach (Person o in habitantList)
             {
-                buffer += person.Name + person.Surname + person.Age.ToString();
+                buffer += o.Name + o.Surname + o.Age.ToString();
                 buffer += " ";
             }
             return buffer;
-        }
-        public string AddHabitant()
-        {
-            return $"{Show()}";
-        }
-        public string GetInfoAboutAllHabitants(int position)
-        {
-            return $"Flat number:{numberOfFlat}, {area}, {numberOfRooms}    persons who live here:{persons[position].ToString()}";
         }
     }
 }
