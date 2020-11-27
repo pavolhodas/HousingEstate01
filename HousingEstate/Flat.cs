@@ -10,13 +10,21 @@ namespace HousingEstate
         private string area { get; }
         private int numberOfRooms { get; }
         public List<Person> habitantList = new List<Person>() { };
-        public Flat(int NumberOfFlat, string Area, int NumberOfRooms) 
+        public Flat(int NumberOfFlat, string Area, int NumberOfRooms)
         {
             numberOfFlat = NumberOfFlat;
             area = Area;
             numberOfRooms = NumberOfRooms;
-        }
 
+
+            habitantList = new List<Person>
+            {
+                new Person("Palo", "Hodás", 16),
+                new Person("Miloš", "Hodás", 46),
+                new Person("Pter", "Hodás", 18),
+                new Person("Katarína", "Hodásová", 41)
+            };
+        }
 
         public string Tostring()
         {
@@ -33,13 +41,15 @@ namespace HousingEstate
 
         public string GetInfoAboutAllHabitants()
         {
-            string buffer = "";
-            foreach (Person o in habitantList)
             {
-                buffer += o.Name + o.Surname + o.Age.ToString();
-                buffer += " ";
+                string buffer = "";
+                foreach (Person o in habitantList)
+                {
+                    buffer += o.ToString();
+                    buffer += " - ";
+                }
+                return buffer.Remove(buffer.Length - 3);
             }
-            return buffer;
         }
     }
 }
