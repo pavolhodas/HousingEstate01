@@ -18,12 +18,13 @@ namespace HousingEstate
 
             Console.WriteLine(flat.Tostring());
             Console.WriteLine();
-            flat.AddHabitant(a);
-            flat.AddHabitant(b);
-            flat.AddHabitant(c);
-            flat.AddHabitant(d);
+            flat.AddHabitant(a, flat);
+            flat.AddHabitant(b, flat);
+            flat.AddHabitant(c, flat);
+            flat.AddHabitant(d, flat);
             Console.WriteLine();
             Console.WriteLine(flat.GetInfoAboutAllHabitants());
+            Console.WriteLine(a.GetInfoAboutFlat(flat));
         }
        
         

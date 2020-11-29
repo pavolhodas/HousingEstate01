@@ -25,6 +25,16 @@ namespace HousingEstate
                 new Person("Katarína", "Hodásová", 41)
             };
         }
+        private string ShowHabitants()
+        {
+            string buffer = "";
+            foreach (Person o in habitantList)
+            {
+                buffer += o.ToString();
+                buffer += " - ";
+            }
+            return buffer.Remove(buffer.Length - 3);
+        }
 
         public string Tostring()
         {
@@ -32,24 +42,16 @@ namespace HousingEstate
         }
 
 
-        public void AddHabitant(Person habitant)
+        public void AddHabitant(Person habitant, Flat flat)
         {
-            Console.WriteLine(habitant);
+            Console.WriteLine(habitant + flat.ToString());
         }
 
 
 
         public string GetInfoAboutAllHabitants()
         {
-            {
-                string buffer = "";
-                foreach (Person o in habitantList)
-                {
-                    buffer += o.ToString();
-                    buffer += " - ";
-                }
-                return buffer.Remove(buffer.Length - 3);
-            }
+            return ShowHabitants();
         }
     }
 }

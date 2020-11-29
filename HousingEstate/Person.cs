@@ -10,7 +10,6 @@ namespace HousingEstate
         public string Surname { get; }
         public int Age { get; }
 
-
         public Person(string name, string surname, int age)
         {
             Name = name;
@@ -21,6 +20,10 @@ namespace HousingEstate
         {
            return $"{Name}, {Surname}, {Age}";
         }
+        public string GetInfoAboutFlat(Flat flats)
+        {
 
+            return $"{flats.Tostring()}";
+        }
     }
 }
