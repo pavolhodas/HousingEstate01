@@ -14,14 +14,16 @@ namespace HousingEstate
 
 
             Flat flat = new Flat(1, "100m²", 5);
+            Flat flat2 = new Flat(2, "100m²", 4);
+
 
 
             Console.WriteLine(flat.Tostring());
             Console.WriteLine();
             flat.AddHabitant(a, flat);
             flat.AddHabitant(b, flat);
-            flat.AddHabitant(c, flat);
-            flat.AddHabitant(d, flat);
+            flat.AddHabitant(c, flat2);
+            flat.AddHabitant(d, flat2);
             Console.WriteLine();
             Console.WriteLine(flat.GetInfoAboutAllHabitants());
             Console.WriteLine(a.GetInfoAboutFlat(flat));

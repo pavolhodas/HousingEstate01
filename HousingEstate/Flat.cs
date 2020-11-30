@@ -44,7 +44,7 @@ namespace HousingEstate
 
         public void AddHabitant(Person habitant, Flat flat)
         {
-            Console.WriteLine(habitant + flat.ToString());
+            Console.WriteLine(habitant + " - " + flat.Tostring());
         }
 
 
