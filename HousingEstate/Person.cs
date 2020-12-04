@@ -20,10 +20,5 @@ namespace HousingEstate
         {
            return $"{Name}, {Surname}, {Age}";
         }
-        public string GetInfoAboutFlat(Flat flats)
-        {
-
-            return $"{flats.Tostring()}";
-        }
     }
 }

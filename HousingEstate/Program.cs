@@ -6,29 +6,34 @@ namespace HousingEstate
     {
         static void Main(string[] args)
         {
-            Person a = new Person("Palo", "Hodás", 16);
-            Person b = new Person("Miloš", "Hodás", 46);
-            Person c = new Person("Pter", "Hodás", 18);
-            Person d = new Person("Katarína", "Hodásová", 41);
+            Habitant a = new Habitant("Palo", "Hodás", 16);
+            Habitant b = new Habitant("Miloš", "Hodás", 46);
+            Habitant c = new Habitant("Pter", "Hodás", 18);
+            Habitant d = new Habitant("Katarína", "Hodásová", 41);
 
-
+            Person administrator = new Person("Ferdinand", "Káblovec", 55);
+            Person charwoman = new Person("Ivka", "Rýchla", 60);
 
             Flat flat = new Flat(1, "100m²", 5);
             Flat flat2 = new Flat(2, "100m²", 4);
 
 
-
-            Console.WriteLine(flat.Tostring());
-            Console.WriteLine();
+            Console.WriteLine("ZARADENIE ČLOVEK - BYT:");
             flat.AddHabitant(a, flat);
             flat.AddHabitant(b, flat);
             flat.AddHabitant(c, flat2);
             flat.AddHabitant(d, flat2);
             Console.WriteLine();
+            Console.WriteLine("VŠETCI OBYVATELI BYTOV:");
             Console.WriteLine(flat.GetInfoAboutAllHabitants());
             Console.WriteLine(a.GetInfoAboutFlat(flat));
+            Console.WriteLine();
+            Console.WriteLine("PRACOVNÍCI:");
+            Console.WriteLine("správca: " + administrator);
+            Console.WriteLine("upratovačka: " + charwoman);
+
         }
-       
-        
+
+
     }
 }

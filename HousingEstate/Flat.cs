@@ -9,7 +9,7 @@ namespace HousingEstate
         private int numberOfFlat { get; }
         private string area { get; }
         private int numberOfRooms { get; }
-        public List<Person> habitantList = new List<Person>() { };
+        public List<Habitant> habitantList = new List<Habitant>() { };
         public Flat(int NumberOfFlat, string Area, int NumberOfRooms)
         {
             numberOfFlat = NumberOfFlat;
@@ -17,12 +17,12 @@ namespace HousingEstate
             numberOfRooms = NumberOfRooms;
 
 
-            habitantList = new List<Person>
+            habitantList = new List<Habitant>
             {
-                new Person("Palo", "Hodás", 16),
-                new Person("Miloš", "Hodás", 46),
-                new Person("Pter", "Hodás", 18),
-                new Person("Katarína", "Hodásová", 41)
+                new Habitant("Palo", "Hodás", 16),
+                new Habitant("Miloš", "Hodás", 46),
+                new Habitant("Pter", "Hodás", 18),
+                new Habitant("Katarína", "Hodásová", 41)
             };
         }
         private string ShowHabitants()
@@ -42,7 +42,7 @@ namespace HousingEstate
         }
 
 
-        public void AddHabitant(Person habitant, Flat flat)
+        public void AddHabitant(Habitant habitant, Flat flat)
         {
             Console.WriteLine(habitant + " - " + flat.Tostring());
         }
