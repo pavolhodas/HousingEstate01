@@ -18,15 +18,18 @@ namespace HousingEstate
             Flat flat2 = new Flat(2, "100m²", 4);
 
 
+
             Console.WriteLine("ZARADENIE ČLOVEK - BYT:");
             flat.AddHabitant(a, flat);
             flat.AddHabitant(b, flat);
             flat.AddHabitant(c, flat2);
             flat.AddHabitant(d, flat2);
+
             Console.WriteLine();
-            Console.WriteLine("VŠETCI OBYVATELI BYTOV:");
+            Console.WriteLine("VŠETCI OBYVATELIA BYTOV:");
             Console.WriteLine(flat.GetInfoAboutAllHabitants());
             Console.WriteLine(a.GetInfoAboutFlat(flat));
+
             Console.WriteLine();
             Console.WriteLine("PRACOVNÍCI:");
             Console.WriteLine("správca: " + administrator);
