@@ -10,12 +10,13 @@ namespace HousingEstate
         private string area { get; }
         private int numberOfRooms { get; }
         public List<Habitant> habitantList = new List<Habitant>() { };
+        public List<Entrace> entraceList = new List<Entrace>() { };
+
         public Flat(int NumberOfFlat, string Area, int NumberOfRooms)
         {
             numberOfFlat = NumberOfFlat;
             area = Area;
             numberOfRooms = NumberOfRooms;
-
 
             habitantList = new List<Habitant>
             {
@@ -42,9 +43,9 @@ namespace HousingEstate
         }
 
 
-        public void AddHabitant(Habitant habitant, Flat flat)
+        public void AddHabitant(Habitant habitant, Flat flat, Entrace entrace)
         {
-            Console.WriteLine(habitant + " - " + flat.Tostring());
+            Console.WriteLine(habitant + "  -  " + flat.Tostring() + "  -  " + entrace.ToString());
         }
 
 
@@ -53,5 +54,21 @@ namespace HousingEstate
         {
             return ShowHabitants();
         }
+
+        //public string GetInfoAboutEntrace(Entrace entrace)
+        //{
+        //    if(entrace.sideOfStreet == "R")
+        //    {
+        //        return entrace.sideOfStreet;
+        //    }
+        //    if (entrace.sideOfStreet == "L")
+        //    {
+        //        return entrace.sideOfStreet;
+        //    }
+        //    else
+        //    {
+        //        return "This entrace don´t exist.";
+        //    }
+        //}
     }
 }

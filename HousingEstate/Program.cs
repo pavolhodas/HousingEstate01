@@ -18,12 +18,16 @@ namespace HousingEstate
             Flat flat2 = new Flat(2, "100m²", 4);
 
 
+            Entrace entrace1 = new Entrace(1, 4, 12);
+            Entrace entrace2 = new Entrace(2, 7, 21);
+            Entrace entrace3 = new Entrace(3, 9, 27);
 
-            Console.WriteLine("ZARADENIE ČLOVEK - BYT:");
-            flat.AddHabitant(a, flat);
-            flat.AddHabitant(b, flat);
-            flat.AddHabitant(c, flat2);
-            flat.AddHabitant(d, flat2);
+
+            Console.WriteLine("ZARADENIE ČLOVEK - BYT - VCHOD:");
+            flat.AddHabitant(a, flat, entrace1);
+            flat.AddHabitant(b, flat, entrace2);
+            flat.AddHabitant(c, flat2, entrace3);
+            flat.AddHabitant(d, flat2, entrace3);
 
             Console.WriteLine();
             Console.WriteLine("VŠETCI OBYVATELIA BYTOV:");
@@ -34,6 +38,7 @@ namespace HousingEstate
             Console.WriteLine("PRACOVNÍCI:");
             Console.WriteLine("správca: " + administrator);
             Console.WriteLine("upratovačka: " + charwoman);
+
 
         }
 
