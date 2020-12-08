@@ -6,9 +6,9 @@ namespace HousingEstate
 {
     class Entrace
     {
-        public int nameOfEntrace;
-        public int numberOfFloors;
-        public int numberOfFlats;
+        private int nameOfEntrace;
+        private int numberOfFloors;
+        private int numberOfFlats;
         public Entrace(int NameOfEntrace,int NumberOfFloors, int NumberOfFlats)
         {
             nameOfEntrace = NameOfEntrace;
@@ -21,13 +21,9 @@ namespace HousingEstate
             {
                 return "Side of road: R";
             }
-            if (nameOfEntrace%2 != 0)
-            {
-                return "Side of road: L";
-            }
             else
             {
-                return "This entrace don´t exist.";
+                return "Side of road: L";
             }
         }
         public override string ToString()

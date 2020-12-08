@@ -24,10 +24,10 @@ namespace HousingEstate
 
 
             Console.WriteLine("ZARADENIE ČLOVEK - BYT - VCHOD:");
-            flat.AddHabitant(a, flat, entrace1);
-            flat.AddHabitant(b, flat, entrace2);
-            flat.AddHabitant(c, flat2, entrace3);
-            flat.AddHabitant(d, flat2, entrace3);
+            Console.WriteLine(flat.AddHabitant(a, flat, entrace1));
+            Console.WriteLine(flat.AddHabitant(b, flat, entrace2));
+            Console.WriteLine(flat.AddHabitant(c, flat2, entrace3));
+            Console.WriteLine(flat.AddHabitant(d, flat2, entrace3));
 
             Console.WriteLine();
             Console.WriteLine("VŠETCI OBYVATELIA BYTOV:");
@@ -38,10 +38,6 @@ namespace HousingEstate
             Console.WriteLine("PRACOVNÍCI:");
             Console.WriteLine("správca: " + administrator);
             Console.WriteLine("upratovačka: " + charwoman);
-
-
         }
-
-
     }
 }

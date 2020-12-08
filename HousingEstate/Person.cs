@@ -6,23 +6,21 @@ namespace HousingEstate
 {
     class Person
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public int Age { get; set; }
-        
-        public Person(string name, string surname, int age)
+        private string name { get; }
+        private string surname { get; }
+        private int age { get; }
+        public Person(string Name, string Surname, int Age)
         {
-            Name = name;
-            Surname = surname;
-            Age = age;
+            name = Name;
+            surname = Surname;
+            age = Age;
         }
         public override string ToString()
         {
-           return $"{Name} {Surname}, {Age}";
+           return $"{name} {surname}, {age}";
         }
         public Person()
         {
-
         }
     }
 }
