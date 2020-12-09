@@ -9,9 +9,9 @@ namespace HousingEstate
         public Habitant(string name, string surname, int age) : base(name, surname, age)
         {
         }
-        public string GetInfoAboutFlat(Flat flats)
+        public string GetInfoAboutFlat(Habitant habitant, Flat flats)
         {
-            return $"{flats.Tostring()}";
+            return $"{habitant.ToString()}  -  {flats.Tostring()}";
         }
     }
 }

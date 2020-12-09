@@ -18,26 +18,41 @@ namespace HousingEstate
             Flat flat2 = new Flat(2, "100m²", 4);
 
 
-            Entrace entrace1 = new Entrace(1, 4, 12);
-            Entrace entrace2 = new Entrace(2, 7, 21);
-            Entrace entrace3 = new Entrace(3, 9, 27);
+            Entrace entrace1 = new Entrace(1, 7, 14);
+            Entrace entrace2 = new Entrace(2, 7, 14);
+            Entrace entrace3 = new Entrace(3, 7, 14);
+            Entrace entrace4 = new Entrace(4, 7, 14);
 
+            BlockOfFlats blockOfFlats1 = new BlockOfFlats("A1", "Štefániková");
+            BlockOfFlats blockOfFlats2 = new BlockOfFlats("A2", "Záriečská");
+
+            HausingEstate hausingEstate = new HausingEstate("Vlčince");
+
+
+            Console.WriteLine(hausingEstate.ToString());
+            Console.WriteLine();
 
             Console.WriteLine("ZARADENIE ČLOVEK - BYT - VCHOD:");
-            Console.WriteLine(flat.AddHabitant(a, flat, entrace1));
-            Console.WriteLine(flat.AddHabitant(b, flat, entrace2));
-            Console.WriteLine(flat.AddHabitant(c, flat2, entrace3));
-            Console.WriteLine(flat.AddHabitant(d, flat2, entrace3));
+            Console.WriteLine("zadajte stranu na ktorej je byt- L, R");
+            Console.WriteLine(hausingEstate.AddHabitant(a, flat, entrace1, entrace3, blockOfFlats1));
+            Console.WriteLine(hausingEstate.AddHabitant(b, flat, entrace2, entrace4, blockOfFlats2));
+            
 
             Console.WriteLine();
             Console.WriteLine("VŠETCI OBYVATELIA BYTOV:");
             Console.WriteLine(flat.GetInfoAboutAllHabitants());
-            Console.WriteLine(a.GetInfoAboutFlat(flat));
+
+            Console.WriteLine();
+            Console.WriteLine("ZARADOVANIE OBYVATELOV DO BYTOV:");
+            Console.WriteLine(a.GetInfoAboutFlat(a, flat));
 
             Console.WriteLine();
             Console.WriteLine("PRACOVNÍCI:");
             Console.WriteLine("správca: " + administrator);
             Console.WriteLine("upratovačka: " + charwoman);
+
+            Console.WriteLine();
+            Console.WriteLine(blockOfFlats1.ToString());
         }
     }
 }

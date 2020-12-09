@@ -9,6 +9,8 @@ namespace HousingEstate
         private int numberOfFlat { get; }
         private string area { get; }
         private int numberOfRooms { get; }
+        public string HabitantInFlat { get; set; }
+
         public List<Habitant> habitantList = new List<Habitant>() { };
         public Flat(int NumberOfFlat, string Area, int NumberOfRooms)
         {
@@ -38,10 +40,7 @@ namespace HousingEstate
         {
             return $"{numberOfFlat}, {area}, {numberOfRooms}";
         }
-        public string AddHabitant(Habitant habitant, Flat flat, Entrace entrace)
-        {
-           return habitant + "  -  " + flat.Tostring() + "  -  " + entrace.ToString();
-        }
+        
         public string GetInfoAboutAllHabitants()
         {
             return ShowHabitants();

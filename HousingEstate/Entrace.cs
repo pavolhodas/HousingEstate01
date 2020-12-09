@@ -17,15 +17,17 @@ namespace HousingEstate
         }
         public string GetInfoAboutEntrace()
         {
-            if (nameOfEntrace%2 == 0)
+            if (nameOfEntrace % 2 == 0)
             {
-                return "Side of road: R";
+                return "Strana cesty: R";
             }
             else
             {
-                return "Side of road: L";
+                return "Strana cesty: L";
             }
         }
+
+
         public override string ToString()
         {
             return $"{nameOfEntrace}, {numberOfFloors}, {numberOfFlats}, {GetInfoAboutEntrace()}";
